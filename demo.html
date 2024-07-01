@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>personal portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="typewriter">Hello! I am <span>Alina Nisar</span></h1>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/alina-nisar-1879a92a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Alina1902" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <nav>
+        <a href="#" class="nav-link" data-target="about">About</a>
+        <a href="#" class="nav-link" data-target="skills">Skills</a>
+        <a href="#" class="nav-link" data-target="projects">Projects</a>
+        <a href="#" class="nav-link" data-target="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="about-section">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Studying at: UET, Taxila</p>
+      <p>Education: Bsc Software Enginneer Undergraduate</p>
+      <p>I am eager to become an expert in web development <br>with expertise in developing appealing websites <br>using my own skills and AI.</p>
+      <p>You can reach me at alinanisar019@gmail.com</p>
+    </div>
+    <img src="profilepic.jpg" alt="Alina" id="profile-pic">
+    <div class="cloud" id="cloud">Hi!</div>
+  </div>
+  
+  <div class="skills-section">
+    <div class="skills-text">
+      <h2>My Skills</h2>
+      <p><h3>Html :</h3> Intermediate</p>
+      <p><h3>CSS : </h3>Intermediate</p>
+      <p><h3>Javascript :</h3>Intermediate</p>
+    </div>
+    <img src="work.jpg" alt="Skills" id="skills-pic">
+    <div class="cloud" id="cloud">Hi!</div>
+  </div>
+  
+  <div class="projects-contact" id="projects-contact">
+    <section id="projects" class="active">
+      <h2>My Projects</h2>
+      <p>FlexiCard Pro: <a href="https://flexicard-pro.com" target="_blank">A shopping website integrating AR, AI technologies etc.</a></p>
+      <p>StudentHelper: <a href="https://student-helper.net" target="_blank">A mobile app to help students with scheduling, note-taking, and study tools.</a></p>
+      <p>WeatherApp: <a href="https://weather-app.io" target="_blank">A weather app that displays the current weather and forecast.</a></p>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-form">
+        <input type="text" id="name-input" placeholder="Name" required>
+        <input type="email" id="email-input" placeholder="Email" required>
+        <textarea id="message-input" placeholder="Message" required></textarea>
+        <button type="submit" id="submit-btn">Submit</button>
+      </div>
+    </section>
+  </div>
+  
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h3>Please enter your name and email address.</h3>
+      <button id="popup-close-btn">Close</button>
+    </div>
+  </div>
+  
+  <footer>
+    <button id="theme-btn">Toggle Theme</button>
+    <p>&copy; 2024 Personal Portfolio. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

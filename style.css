@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #6b5b95;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  header {
+    padding: 40px 20px;
+    text-align: right;
+    position: relative;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .hero-text {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero h1.typewriter {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: 
+      typewriter 4s steps(20) 1s 1 normal both,
+      blink-caret .75s steps(20) infinite;
+  }
+  
+  .hero h1 span {
+    color: #8b008b;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 24px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav a {
+    color: #8b008b;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .about-section {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 0 20px 40px;
+    height: 400px;
+    position: relative;
+  }
+  
+  .about-section .about-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .skills-section {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 0 20px 40px;
+    height: 400px;
+    position: relative;
+  }
+  
+  .skills-section .skills-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .about-section img,
+  .skills-section img {
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 40px;
+    cursor: pointer;
+  }
+  
+  .projects-contact {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .projects-contact section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+    flex: 1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .projects-contact section.active {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .projects-contact section.active h2 {
+    color: #8b008b;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .cloud {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #6b5b95;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cloud.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .cloud:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .popup.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup-content {
+    background-color: #6b5b95;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .light-mode {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    50% { border-color: transparent; }
+  }
